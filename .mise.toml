@@ -1,0 +1,3 @@
+[tools]
+yamlfmt = "latest"
+node = "24"

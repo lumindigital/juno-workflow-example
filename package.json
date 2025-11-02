@@ -1,0 +1,36 @@
+{
+  "name": "@lumindigital/juno-workflow-example",
+  "description": "Example workflow project for Juno",
+  "version": "0.0.1",
+  "author": "Aaron Mell",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && tsc",
+    "pregenerate": "rm -rf ./output && npm run build",
+    "generate": "npx juno generate -i $INIT_CWD/dist -o ./output && yamlfmt ./output/**",
+    "lint": "npx eslint .",
+    "pretty": "npx prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx}\"",
+    "precommit": "pre-commit run --all-files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lumin-Digital/juno-workflows.git"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Lumin-Digital/juno-workflows/issues"
+  },
+  "homepage": "https://github.com/Lumin-Digital/juno-workflows#readme",
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.36.0",
+    "@lumindigital/juno": "^1.0.5",
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.6.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.46.2"
+  }
+}
