@@ -25,7 +25,7 @@
   "homepage": "https://github.com/Lumin-Digital/juno-workflows#readme",
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.36.0",
+    "@eslint/js": "^9.39.0",
     "@lumindigital/juno": "^1.0.5",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
