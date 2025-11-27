@@ -29,7 +29,7 @@
     "@lumindigital/juno": "^1.0.5",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
-    "prettier": "^3.6.2",
+    "prettier": "^3.7.1",
     "typescript": "5.9.3",
     "typescript-eslint": "^8.46.2"
   }
