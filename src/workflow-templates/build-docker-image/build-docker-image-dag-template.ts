@@ -17,10 +17,10 @@ export class BuildDockerImageEntrypointDagTemplate {
         template: GitPullContainerTemplate.gitPullScriptTemplate,
         arguments: new Arguments({
             parameters: [
-                GitPullContainerTemplate.gitPath.toArgumentParameter({ valueFromInputParameter: this.gitPath }),
-                GitPullContainerTemplate.gitRepoName.toArgumentParameter({ valueFromInputParameter: this.gitRepoName }),
+                GitPullContainerTemplate.gitPath.toArgumentParameter({ valueFromExpressionArgs: this.gitPath }),
+                GitPullContainerTemplate.gitRepoName.toArgumentParameter({ valueFromExpressionArgs: this.gitRepoName }),
                 GitPullContainerTemplate.gitVolumeName.toArgumentParameter({
-                    valueFromInputParameter: this.gitVolumeName,
+                    valueFromExpressionArgs: this.gitVolumeName,
                 }),
             ],
         }),
@@ -31,10 +31,10 @@ export class BuildDockerImageEntrypointDagTemplate {
         arguments: new Arguments({
             parameters: [
                 BuildKitContainerTemplate.volumeName.toArgumentParameter({ value: 'src' }),
-                BuildKitContainerTemplate.repoName.toArgumentParameter({ valueFromInputParameter: this.gitRepoName }),
+                BuildKitContainerTemplate.repoName.toArgumentParameter({ valueFromExpressionArgs: this.gitRepoName }),
                 BuildKitContainerTemplate.dockerfilePath.toArgumentParameter({ value: '.' }),
                 BuildKitContainerTemplate.imageName.toArgumentParameter({
-                    valueFromInputParameter: this.image,
+                    valueFromExpressionArgs: this.image,
                 }),
             ],
         }),

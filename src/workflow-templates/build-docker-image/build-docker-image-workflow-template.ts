@@ -20,14 +20,14 @@ export async function generateTemplate(): Promise<IoArgoprojWorkflowV1Alpha1Work
                     arguments: new Arguments({
                         parameters: [
                             BuildDockerImageEntrypointDagTemplate.gitRepoName.toArgumentParameter({
-                                valueFromWorkflowParameter: BuildDockerImageWorkflowParameters.gitRepoName,
+                                valueFromExpressionArgs: BuildDockerImageWorkflowParameters.gitRepoName,
                             }),
                             BuildDockerImageEntrypointDagTemplate.gitPath.toArgumentParameter({
-                                valueFromWorkflowParameter: BuildDockerImageWorkflowParameters.gitPath,
+                                valueFromExpressionArgs: BuildDockerImageWorkflowParameters.gitPath,
                             }),
                             BuildDockerImageEntrypointDagTemplate.gitVolumeName.toArgumentParameter({ value: 'src' }),
                             BuildDockerImageEntrypointDagTemplate.image.toArgumentParameter({
-                                valueFromWorkflowParameter: BuildDockerImageWorkflowParameters.image,
+                                valueFromExpressionArgs: BuildDockerImageWorkflowParameters.image,
                             }),
                         ],
                     }),
