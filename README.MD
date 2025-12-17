@@ -1,11 +1,15 @@
 # Juno Workflow Example
-This project is an example of a juno worklow project. It contains a simple workflow template that pulls a git repo and the builds an image.
+This project is an example of a juno workflow project. It contains a simple workflow template that pulls a git repo and the builds an image.
 This project is structured in a similar way to our our own internal workflows. This project is representative of that even though it is a very simple project with a single workflow. Feel free to ignore any of the design decisions you disagree with. If you think there are better alternatives we would love to hear your feedback with examples.
 
 Some of the design decisions we made
 * Verbose naming to make it clear the type of template the file contains
 * Use of a single location for all image tags in src/utils/image-tags.ts
 * All parameters passed to dags/templates, global paramters passed into entrypoint dag.
+
+# Requirements
+You will need to install nodejs in order to generate manifests
+
 
 # Kubernetes Setup
 You will need a config.json file added to your argo workflow namespace
