@@ -27,7 +27,7 @@
     "@eslint/eslintrc": "3",
     "@eslint/js": "10",
     "@lumindigital/juno": "2",
-    "eslint": "9",
+    "eslint": "10",
     "eslint-config-prettier": "10",
     "prettier": "3",
     "typescript": "5",
