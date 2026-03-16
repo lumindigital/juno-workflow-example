@@ -1,5 +1,5 @@
 import { InputParameter } from '@lumindigital/juno/dist/api/parameter.js';
-import { simpleTag } from '@lumindigital/juno/dist/api/expression.js';
+import { simpleTag } from '@lumindigital/juno/dist/api/expressions/tag.js';
 import { EnvironmentVariable } from '@lumindigital/juno/dist/api/environment-variable.js';
 import { ImageTags } from '../utils/image-tags.js';
 import { Template } from '@lumindigital/juno/dist/api/template.js';
@@ -32,7 +32,7 @@ export class GitPullContainerTemplate {
             args: ['clone', '--depth=1', '$(GIT_REPOSITORY_URL)'],
             volumeMounts: [
                 {
-                    name: simpleTag(this.gitVolumeName),
+                    name: simpleTag(this.gitVolumeName).toString(),
                     mountPath: '/mnt/src',
                 },
             ],
