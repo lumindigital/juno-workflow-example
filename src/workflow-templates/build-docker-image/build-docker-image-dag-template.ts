@@ -38,7 +38,7 @@ export class BuildDockerImageEntrypointDagTemplate {
                 }),
             ],
         }),
-        dependencies: [this.getDockerRepository],
+        dependenciesExpressions: [this.getDockerRepository],
     });
 
     private static buildDockerImageDag = new DagTemplate({
