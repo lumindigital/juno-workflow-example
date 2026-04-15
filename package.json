@@ -30,7 +30,7 @@
     "eslint": "10",
     "eslint-config-prettier": "10",
     "prettier": "3",
-    "typescript": "5",
+    "typescript": "6",
     "typescript-eslint": "8"
   }
 }
